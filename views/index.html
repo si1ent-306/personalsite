@@ -7,6 +7,7 @@
     <meta name="author" content="Elliott Wagner" />
     <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/dcc0625c67.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="mainHeadingDiv">
@@ -20,5 +21,13 @@
         <button id="announcerBtn" class="btn-76">Announcer</button>
     </a>
 </div>
+<i class="fa-sharp-duotone fa-solid fa-circle-half-stroke" onclick="myFunction()" id="switchbtn"></i>
+<script>
+    function myFunction() {
+        let element = document.body;
+        element.classList.toggle("light");
+    }
+
+</script>
 </body>
 </html>

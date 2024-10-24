@@ -6,9 +6,24 @@
     <meta name="author" content="Elliott Wagner" />
     <link rel="icon" href="/images/icon.png">
     <link rel="stylesheet" type="text/css" href="/css/it.css">
+    <script src="https://kit.fontawesome.com/dcc0625c67.js" crossorigin="anonymous"></script>
     <title>IT</title>
 </head>
 <body>
     <h1>IT</h1>
+<nav id="itNav">
+    <ul>
+        <li><a href="/it/tech">Tech</a></li>
+        <li><a href="/it/non-tech">Non-Tech</a></li>
+    </ul>
+</nav>
+    <i class="fa-sharp-duotone fa-solid fa-circle-half-stroke" onclick="myFunction()" id="switchbtn"></i>
+<script>
+    function myFunction() {
+        let element = document.body;
+        element.classList.toggle("light");
+    }
+
+</script>
 </body>
 </html>
