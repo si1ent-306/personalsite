@@ -1,41 +1,262 @@
+/* 
+  Styles for the Announcing page
+*/
+
+/* 
+  Body styles
+*/
 body {
-    padding: 25px;
+    /* 
+      Set the background color to black and the text color to white
+    */
     background-color: black;
     color: white;
+
+    /* 
+      Set the font size to 25px and add a transition effect
+    */
     font-size: 25px;
     transition: background-color 0.3s, color 0.3s;
+
+    /* 
+      Set the display to grid and define the grid template columns and rows
+    */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+
+    /* 
+      Set the margin and padding to 0 and hide the overflow
+    */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+p{
+    /* Set the font size to 25px */
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* Set the grid column start to 2 and the grid row start to 1 */
+    grid-column-start: 2;
+    grid-row-start: 1;
+    /* Add margin and center the text */
+    margin: 20px;
+    text-align: center;
+}
+
+/* 
+  Navigation styles
+*/
+#announcingNav {
+    /* 
+      Set the grid column start to 2 and the grid row start to 1
+    */
+    grid-column-start: 2;
+    grid-row-start: 1;
+
+    /* 
+      Add padding and set the height and width
+    */
+    padding: 20px;
+    height: 100vh;
+    width: auto;
+
+    /* 
+      Set the display to flex and add a box shadow
+    */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 90px #ff0000;
+}
+
+/* 
+  List styles
+*/
+#announcingNav ul {
+    /* 
+      Set the list style type to none and remove the margin and padding
+    */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    /* 
+      Set the flex grow to 1
+    */
+    flex-grow: 1;
+}
+
+/* 
+  List item styles
+*/
+#announcingNav li {
+    /* 
+      Add margin to the bottom of each list item
+    */
+    margin-bottom: 10px;
+}
+
+/* 
+  Link styles
+*/
+#announcingNav a {
+    /* 
+      Set the color to white and remove the text decoration
+    */
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 
+  Header styles
+*/
 h1{
-    color: white;
+    /* 
+      Set the font size to 50px and add a text shadow
+    */
     font-size: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: white 0px 0px 5px;
+    text-shadow: 0 0 30px #ff0000;
+
+    /* 
+      Set the grid column start to 1 and the grid row start to 1
+    */
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    /* 
+      Add margin and center the text
+    */
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
 }
+
+/* 
+  Navigation styles
+*/
+nav{
+    /* 
+      Set the height to 100vh and hide the overflow
+    */
+    height: 100vh;
+    overflow: hidden;
+
+    /* 
+      Set the margin to 0 and add a display of flex
+    */
+    margin: 0;
+    display: flex;
+
+    /* 
+      Remove the text decoration and set the grid column start to 2
+    */
+    text-decoration: none;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+/* 
+  List item styles
+*/
+nav li, nav a {
+    /* 
+      Set the display to block and add margin and padding
+    */
+    display: block;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: right;
+    /* 
+      Remove the text decoration and list style type
+    */
+    text-decoration: none;
+    list-style-type: none;
+    list-style-image: none;
+
+    /* 
+      Set the color to white and add a text shadow
+    */
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+
+    /* 
+      Set the cursor to pointer
+    */
+    cursor: pointer;
+}
+
+/* 
+  Light theme styles
+*/
 .light {
+    /* 
+      Set the background color to white and the text color to black
+    */
     background-color: white;
     color: black;
+
+    /* 
+      Set the header styles
+    */
     h1{
         color: black;
         font-size: 50px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-shadow: #ff0000 0px 0px 30px;
+    }
+
+    /* 
+      Set the list item styles
+    */
+    nav li, nav a {
+        color: black;
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+        text-decoration: none;
+        list-style-type: none;
+        list-style-image: none;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-shadow: black 0px 0px 2px;
     }
 }
-nav{
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    list-style-image: none;
-    list-style-type: none;
+
+/* 
+  Light theme styles for navigation
+*/
+.light #announcingNav a {
+    color: #000;
 }
 
+.light #announcingNav li {
+    color: #000;
+}
+
+/* 
+  Switch button styles
+*/
 #switchbtn {
+    /* 
+      Set the position to absolute and add a margin
+    */
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 20px;
+
+    /* 
+      Set the z-index to 1000 and add a cursor
+    */
     z-index: 1000;
     cursor: pointer;
+
+    /* 
+      Set the font size to 35px and the width and height to 50px
+    */
     font-size: 35px;
     width: 50px;
     height: 50px;

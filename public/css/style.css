@@ -66,6 +66,15 @@ body {
         transition: 0.2s linear 0s;
         text-decoration: none;
     }
+    .btn-76:hover {
+        background: var(--neon);
+        box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+        0 0 100px var(--neon);
+        color: #000;
+        outline-color: transparent;
+        transition: 0.3s linear 0s;
+        text-decoration: none;
+    }
 }
 
 h1{
