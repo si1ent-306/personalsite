@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 const bodyParser = require('body-parser');
-const it = require('./routes/it');
+const programming = require('./routes/programming');
 const announcing = require('./routes/announcing');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,7 +20,7 @@ app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-app.use('/it', it);
+app.use('/programming', programming);
 app.use('/announcing', announcing);
 
 app.set('views', path.join(__dirname, '/views'));
