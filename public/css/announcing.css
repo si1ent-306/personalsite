@@ -61,6 +61,7 @@ p{
     height: 100vh;
     width: auto;
 
+
     /* 
       Set the display to flex and add a box shadow
     */
@@ -84,6 +85,7 @@ p{
       Set the flex grow to 1
     */
     flex-grow: 1;
+
 }
 
 /* 
@@ -105,6 +107,7 @@ p{
     */
     color: #fff;
     text-decoration: none;
+    margin-bottom: 5px;
 }
 
 /* 
@@ -240,12 +243,12 @@ nav li, nav a {
   Switch button styles
 */
 #switchbtn {
-    /* 
+    /*
       Set the position to absolute and add a margin
     */
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0;
     margin: 20px;
 
     /* 
