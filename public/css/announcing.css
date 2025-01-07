@@ -44,6 +44,26 @@ body {
     margin: 0;
     padding: 0;
 }
+body ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 0 auto;
+    align-content: center;
+}
+body ul li, a{
+    list-style-type: none;
+    list-style-image: none;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: white 0px 0px 5px;
+    cursor: pointer;
+}
 p{
     /* Set the font size to 25px */
     font-size: 25px;
@@ -125,21 +145,21 @@ p{
 /* 
   Header styles
 */
-h1{
-    /* 
+h1, #title{
+    /*
       Set the font size to 50px and add a text shadow
     */
     font-size: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 0 0 30px #ff0000;
 
-    /* 
+    /*
       Set the grid column start to 1 and the grid row start to 1
     */
     grid-column-start: 1;
     grid-row-start: 1;
 
-    /* 
+    /*
       Add margin and center the text
     */
     margin: 20px;
