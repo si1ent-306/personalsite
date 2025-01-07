@@ -5,7 +5,20 @@
 /* 
   Body styles
 */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    height: auto;
     /* 
       Set the background color to black and the text color to white
     */
@@ -15,7 +28,7 @@ body {
     /* 
       Set the font size to 25px and add a transition effect
     */
-    font-size: 25px;
+    font-size: 1.5rem;
     transition: background-color 0.3s, color 0.3s;
 
     /* 
@@ -30,7 +43,6 @@ body {
     */
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 p{
     /* Set the font size to 25px */
@@ -134,7 +146,31 @@ h1{
     text-align: center;
     cursor: pointer;
 }
+.contentDiv{
+    /*
+      Add margin and center the text
+    */
+    margin: 20px;
+    text-align: left;
+    font-size: 25px;
+    margin-left: 0;
+    margin-right: auto;
+    color: #fff;
+    float: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-shadow: red 0px 0px 30px;
+    ul{
+        list-style-type: none;
+        margin: 10px;
+        text-shadow: 0 0 30px #ffffff;
+    }
+    li{
+        margin: 10px;
+        padding: 5px;
+        text-shadow: 0 0 30px #ffffff;
+    }
 
+}
 /* 
   Navigation styles
 */
@@ -142,7 +178,7 @@ nav{
     /* 
       Set the height to 100vh and hide the overflow
     */
-    height: 100vh;
+    height: auto;
     overflow: hidden;
 
     /* 
@@ -150,6 +186,7 @@ nav{
     */
     margin: 0;
     display: flex;
+    padding-bottom: 0px;
 
     /* 
       Remove the text decoration and set the grid column start to 2
@@ -158,6 +195,7 @@ nav{
     grid-column-start: 2;
     grid-column-end: 2;
 }
+
 
 /* 
   List item styles
@@ -169,6 +207,7 @@ nav li, nav a {
     display: block;
     margin: 10px 0;
     padding: 10px 0;
+
     text-align: right;
     /* 
       Remove the text decoration and list style type
@@ -190,6 +229,7 @@ nav li, nav a {
     */
     cursor: pointer;
 }
+
 
 /* 
   Light theme styles
@@ -226,6 +266,10 @@ nav li, nav a {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         text-shadow: black 0px 0px 2px;
     }
+    p, li {
+        color: black;
+        text-shadow: black 0px 0px 2px;
+    }
 }
 
 /* 
@@ -246,9 +290,9 @@ nav li, nav a {
     /*
       Set the position to absolute and add a margin
     */
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: fixed;
+    bottom: 1px;
+    left: 5px;
     margin: 20px;
 
     /* 
@@ -263,4 +307,5 @@ nav li, nav a {
     font-size: 35px;
     width: 50px;
     height: 50px;
+
 }

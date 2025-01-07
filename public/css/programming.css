@@ -1,6 +1,17 @@
 /* Global styles */
-/* Global styles */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 body {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     background-color: black;
     color: white;
     font-size: 25px;
