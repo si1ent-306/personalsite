@@ -8,7 +8,12 @@
         opacity: 1;
     }
 }
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevents unnecessary scrolling */
+}
 body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -20,7 +25,7 @@ body {
     grid-template-columns: 1fr auto;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+
 }
 
 
@@ -30,11 +35,13 @@ body {
     grid-column: 2;
     grid-row: 1;
     padding: 20px;
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 90px #ff0000;
     width: auto;
+    height: 100vh;
+
 }
 
 /* Navigation list styles */
@@ -43,6 +50,10 @@ body {
     margin: 0;
     padding: 0;
     flex-grow: 0;
+    height: 100%;
+    max-height: calc(100vh - 40px); /* Adjust for padding */
+    overflow-y: auto; /* Allows scrolling only inside the nav */
+
 }
 
 /* Navigation link styles */
@@ -50,6 +61,7 @@ body {
     color: #fff;
     text-decoration: none;
     margin-bottom: 5px;
+
 }
 
 
@@ -70,6 +82,8 @@ article {
     margin: 20px;
     text-align: center;
     font-size: 25px;
+    height: calc(100vh - 40px); /* Adjusts to fit within the viewport */
+    overflow: auto; /* Enables scrolling only if content overflows */
 }
 p{
     /* Set the font size to 25px */
@@ -86,7 +100,6 @@ p{
 /* Navigation styles */
 nav{
     /* Set the height to 100vh and hide the overflow */
-    height: 100vh;
     overflow: hidden;
     margin: 0;
     /* Set the display to flex and flex direction to column */
@@ -95,6 +108,7 @@ nav{
     /* Set the grid column start to 1 and the grid column end to 3 */
     grid-column-start: 1;
     grid-column-end: 3;
+    height: 100%;
 }
 
 /* Navigation list item and link styles */
@@ -113,6 +127,11 @@ nav li, nav a {
     text-shadow: white 0px 0px 5px;
     /* Add a cursor pointer */
     cursor: pointer;
+}
+
+/*List styles*/
+ul{
+    list-style-type: none;
 }
 
 
@@ -144,11 +163,11 @@ nav li, nav a {
 }
 
 /* Light mode navigation styles */
-.light #itNav a {
+.light #announcingNav a {
     color: #000;
 }
 
-.light #itNav li {
+.light #announcingNav li {
     color: #000;
 }
 
