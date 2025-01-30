@@ -130,10 +130,13 @@ nav li, nav a {
 }
 
 /*List styles*/
-ul{
+.contentDiv ul{
     list-style-type: none;
 }
-
+.contentDiv ul li{
+    list-style-type: none;
+    padding: 7px;
+}
 
 /* Light mode styles */
 .light {
