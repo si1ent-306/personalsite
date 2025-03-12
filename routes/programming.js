@@ -26,5 +26,9 @@ router.get('/personal-projects', function (req, res) {
     console.log(__dirname + '/views/personal-projects.html');
     res.sendFile(path.join(__dirname, '../views/programming/personal-projects.html'));
 })
+router.get('/other', function (req, res) {
+    console.log(__dirname + '/views/other.html');
+    res.sendFile(path.join(__dirname, '../views/programming/other.html'));
+})
 //Export router object and require it in main js file
 module.exports = router;
