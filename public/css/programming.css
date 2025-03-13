@@ -131,7 +131,18 @@ nav li, nav a {
     /* Add a cursor pointer */
     cursor: pointer;
 }
-
+.contentDiv ul li.with-dot {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 10px;
+    font-size: 20px;
+}
+/*List styles*/
+.contentDiv ul li{
+    list-style-type: none;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 /* Light mode styles */
 .light {
