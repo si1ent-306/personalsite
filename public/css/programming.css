@@ -9,6 +9,7 @@
     }
 }
 body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     animation: fadeInAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -77,7 +78,6 @@ body {
 }
 
 /* Header styles */
-/* Header styles */
 h1 {
     font-size: 50px;
     font-family: 'Trebuchet MS', sans-serif;
@@ -86,6 +86,12 @@ h1 {
     text-align: center;
     cursor: pointer;
 }
+h3{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px #0000ff;
+    text-decoration: underline solid white;
+}
 /* Article styles */
 article {
     grid-column: 2;
@@ -93,6 +99,8 @@ article {
     margin: 20px;
     text-align: center;
     font-size: 25px;
+    height: calc(100vh - 40px); /* Adjusts to fit within the viewport */
+    overflow: auto; /* Enables scrolling only if content overflows */
 }
 p{
     /* Set the font size to 25px */
