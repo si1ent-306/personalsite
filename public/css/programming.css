@@ -67,7 +67,14 @@ body {
     text-decoration: none;
     margin-bottom: 5px;
 }
-
+#itNav h1 a{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-shadow: 0 0 30px #0000ff;
+    margin: 20px;
+    text-align: center;
+    cursor: pointer;
+}
 
 /* Header styles */
 /* Header styles */
@@ -79,7 +86,6 @@ h1 {
     text-align: center;
     cursor: pointer;
 }
-
 /* Article styles */
 article {
     grid-column: 2;
