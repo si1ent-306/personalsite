@@ -26,23 +26,7 @@ body {
 
 
 /* Navigation styles */
-#itNav {
-    /* Set the grid column start to 1 and the grid row start to 1 */
-    grid-column-start: 2;
-    grid-row-start: 1;
-    /* Add padding and set the height and width */
-    padding: 20px;
-    height: 100vh;
-    width: auto;
-    /* Set the display to flex and flex direction to column */
-    display: flex;
-    flex-direction: column;
-    /* Add a box shadow */
-    box-shadow: 0 0 90px #0000ff;
-}
 
-
-/* Navigation styles */
 #itNav {
     grid-column: 1;
     grid-row: 1;
@@ -67,6 +51,8 @@ body {
     color: #fff;
     text-decoration: none;
     margin-bottom: 5px;
+    display: inline-block;
+    --neon: #0000ff;
 }
 #itNav h1 a{
     font-size: 50px;
@@ -76,7 +62,14 @@ body {
     text-align: center;
     cursor: pointer;
 }
-
+#itNav a:hover {
+    background: var(--neon);
+    box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon), 0 0 100px var(--neon);
+    outline-color: transparent;
+    transition: 0.4s linear 0s;
+    text-decoration: none;
+    border-radius: 15px;
+}
 /* Header styles */
 h1 {
     font-size: 50px;
