@@ -67,12 +67,14 @@ window.onload = function () {
                         const gameDay = dayWithTime.split('T')[0];
 
                         console.log(`${gameYear}-${gameMonth}-${gameDay}`);
-                        today.innerHTML = gameYear + '-' + gameMonth + '-' + gameDay;
+                        if((gameYear + '-' + gameMonth + '-' + gameDay ) !== today.innerHTML){
+                            today.innerHTML = gameYear + '-' + gameMonth + '-' + (gameDay - 1);
+                        }else{
+                            today.innerHTML = gameYear + '-' + gameMonth + '-' + gameDay;
+                        }
+
                         const li = document.createElement('li');
-                        const button = document.createElement('BUTTON');
-                        button.textContent = "Follow";
                         li.innerHTML = event.name;
-                        li.appendChild(button);
                         gameList.appendChild(li);
                     })
                 })
