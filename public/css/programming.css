@@ -97,7 +97,7 @@ article {
 }
 p{
     /* Set the font size to 25px */
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* Set the grid column start to 2 and the grid row start to 1 */
     grid-column-start: 2;
@@ -142,13 +142,31 @@ nav li, nav a {
     list-style-type: disc;
     list-style-position: inside;
     padding: 10px;
-    font-size: 20px;
+    font-size: 25px;
 }
 /*List styles*/
 .contentDiv ul li{
+    font-size: 25px;
     list-style-type: none;
     padding: 7px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.contentDiv ul li.smallerLI{
+    font-size: 20px;
+    list-style-type: none;
+    padding: 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div#centreDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p#centerP {
+    text-align: center;
+    line-height: 100px;
 }
 
 /* Light mode styles */
