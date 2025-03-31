@@ -3,8 +3,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 100px;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
     background-color: black;
     color: #fff;
@@ -42,6 +42,7 @@ h2#date{
 
 #nav-bar {
     position: fixed;  /* Keeps it at the top even when scrolling */
+    margin-bottom: 40px;
     top: 0;
     left: 0;
     width: 100%;  /* Stretches across the full width */
@@ -77,6 +78,8 @@ h2#date{
     border-radius: 15px;
 }
 
+
+
 #games-list, #stats-list, #news-list{
     list-style-type: none;
     margin: 0;
@@ -85,7 +88,11 @@ h2#date{
 }
 
 #games-list li, #stats-list li, #news-list li{
+    display: flex;
     list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 10px;
     gap: 20px;
@@ -93,9 +100,100 @@ h2#date{
 #games-list{
     text-align: center;
 }
+/* Game page styles */
+#game-info {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.game-container {
+
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+.game-header h1 {
+    margin-bottom: 10px;
+}
+
+.game-status {
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.game-scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.team {
+    text-align: center;
+    width: 40%;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.stats-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.stats-section li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.highlights h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .game-scoreboard {
+        flex-direction: column;
+    }
+
+    .team {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vs {
+        margin: 15px 0;
+    }
+}
 /* Switch button styles */
 #switchbtn {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin: 20px;

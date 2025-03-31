@@ -18,6 +18,7 @@ window.onload = function () {
     let today = document.getElementById('date');
     today.innerHTML = year + '-' + month + '-' + day;
     const listItems = document.querySelectorAll("li");
+    const gameslis = document.getElementsByClassName("game-li");
 
     // Map sports to leagues
     const sportToLeagueMap = {
@@ -53,6 +54,8 @@ window.onload = function () {
                 return;
             }
 
+            localStorage.setItem('currentSport', leagueName);
+
             const options = {method: 'GET'};
 
             //Get games
@@ -62,6 +65,7 @@ window.onload = function () {
                 .then(response => {
                     console.log(response)
                     response.events.forEach(event => {
+                        console.log(event);
                         const dateString = event.date;
                         const [gameYear, gameMonth, dayWithTime] = dateString.split('-');
                         const gameDay = dayWithTime.split('T')[0];
@@ -74,8 +78,36 @@ window.onload = function () {
                         }
 
                         const li = document.createElement('li');
-                        li.innerHTML = event.name;
+                        li.classList.add("game-li");
+                        li.dataset.gameId = event.id;
+                        li.style.cursor = "pointer";
+
+                        const homeImg = document.createElement('img');
+                        homeImg.src = event.competitions[0].competitors[0].team.logo;
+                        homeImg.style.width = "30px";
+                        homeImg.style.height = "30px";
+                        homeImg.style.marginRight = "10px";
+                        const awayImg = document.createElement('img');
+                        awayImg.src = event.competitions[0].competitors[1].team.logo;
+                        awayImg.style.width = "30px";
+                        awayImg.style.height = "30px";
+                        awayImg.style.marginLeft = "10px";
+
+                        const eventName = document.createElement('span');
+                        if(event.competitions[0].competitors[1].team.location === event.competitions[0].competitors[1].team.name){
+                            eventName.textContent = event.competitions[0].competitors[1].team.location + " " + event.competitions[0].competitors[1].score + " - " + event.competitions[0].competitors[0].score + " " + event.competitions[0].competitors[0].team.location;
+                        }else {
+                            eventName.textContent = event.competitions[0].competitors[1].team.location + " " + event.competitions[0].competitors[1].team.name + " " + event.competitions[0].competitors[1].score + " - " + event.competitions[0].competitors[0].score + " " + event.competitions[0].competitors[0].team.location + " " + event.competitions[0].competitors[0].team.name;
+                        }
+                        li.style.padding = "15px";
+
+                        li.appendChild(awayImg)
+                        li.appendChild(eventName);
+                        li.appendChild(homeImg)
                         gameList.appendChild(li);
+                        li.addEventListener('click', function() {
+                            window.location.href = `/scoreboard/game/${event.id}`;
+                        });
                     })
                 })
                 .catch(err =>
@@ -106,7 +138,5 @@ window.onload = function () {
             console.error("Error fetching data:", err.message);
         }
     }
-    signupBtn.addEventListener('click', () => {
-        window.location.href = "/scoreboard/account"
-    })
+
 };
