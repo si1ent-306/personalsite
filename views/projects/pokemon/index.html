@@ -9,9 +9,12 @@
 </head>
 <body>
 
-<label for="pokemonName">Pokemon</label>
-<input id="pokemonName" placeholder="Enter Pokemon Name (Ex: Pikachu)" type="text"/>
-  <button onclick="fetchData()">Fetch Pokemon</button>
+<label for="pokemonName">Pokemon Search</label>
+<form onsubmit="fetchData(event)">
+<input id="pokemonName" placeholder="Enter Pokemon Name" type="text"/>
+</form>
+<h1 id="couldntfind" style="display: none">Couldn't find a Pokemon with that name. Try checking the spelling and search again.</h1>
+  <button onclick="fetchData(event)">Fetch Pokemon</button>
   <div id="pokemonCard" style="display: none">
     <p id="pokemonDisplayName" style="display: none"></p>
     <p id="pokemonID" style="display: none"></p>
