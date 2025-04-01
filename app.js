@@ -1,13 +1,17 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
-const PORT = 3000;
+require('dotenv').config();
+const PORT = process.env.PORT;
 const bodyParser = require('body-parser');
 const programming = require('./routes/programming');
 const announcing = require('./routes/announcing');
 const scoreboard = require('./routes/scoreboard');
 const pokemon = require('./routes/pokemon');
 const weather = require('./routes/weather');
+
+console.log(process.env.WEATHER_API_KEY)
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
