@@ -16,6 +16,7 @@ async function fetchData(e) {
         console.log(response.status)
 
         if(response.status === 404){
+            $pokemonCard.hide();
             $('#couldntfind').show();
         }else{
             $('#couldntfind').hide();

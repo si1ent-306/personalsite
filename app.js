@@ -10,8 +10,7 @@ const announcing = require('./routes/announcing');
 const scoreboard = require('./routes/scoreboard');
 const pokemon = require('./routes/pokemon');
 const weather = require('./routes/weather');
-
-console.log(process.env.WEATHER_API_KEY)
+const blackjack = require('./routes/blackjack');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,7 +25,7 @@ app.use('/announcing', announcing);
 app.use('/scoreboard', scoreboard);
 app.use('/pokemon', pokemon);
 app.use('/weather', weather);
-
+app.use('/blackjack', blackjack);
 
 app.set('views', path.join(__dirname, '/views'));
 
