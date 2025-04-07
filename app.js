@@ -30,7 +30,7 @@ app.use('/blackjack', blackjack);
 app.set('views', path.join(__dirname, '/views'));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname,'index.html'));
 });
 
 
