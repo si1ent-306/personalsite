@@ -11,7 +11,7 @@ const scoreboard = require('./routes/scoreboard');
 const pokemon = require('./routes/pokemon');
 const weather = require('./routes/weather');
 const blackjack = require('./routes/blackjack');
-
+ 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
