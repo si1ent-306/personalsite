@@ -24,7 +24,36 @@ body {
     overflow: hidden;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: 0 0 90px #0000ff;
+  padding: 0;
+  border-bottom: 0;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0000ff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+/* Track on hover */
+::-webkit-scrollbar-track:hover {
+  background: #0000ff;
+  border-radius: 10px;
+}
 /* Navigation styles */
 
 #itNav {
