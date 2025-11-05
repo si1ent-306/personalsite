@@ -18,7 +18,7 @@ window.onload = function () {
     let today = document.getElementById('date');
     today.innerHTML = year + '-' + month + '-' + day;
     const listItems = document.querySelectorAll("li");
-    const gameslis = document.getElementsByClassName("game-li");
+    const gameslist = document.getElementsByClassName("game-li");
 
     // Map sports to leagues
     const sportToLeagueMap = {
@@ -29,6 +29,7 @@ window.onload = function () {
         EPL: "soccer/eng.1",
         LaLiga : "soccer/esp.1",
         Bundesliga : "soccer/ger.1",
+        UCL : "soccer/UEFA.CHAMPIONS",
         "Serie A" : "soccer/ita.1",
     };
 

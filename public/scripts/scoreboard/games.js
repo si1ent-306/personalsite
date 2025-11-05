@@ -63,13 +63,37 @@ window.onload = function () {
             homeTeamDiv.appendChild(homeImg);
             homeTeamDiv.appendChild(homeScore);
 
+            const homeGoals = []
+            const awayGoals = []
+            if(currentSport.includes("soccer")){
+                console.log(data.competitions[0].details)
+                data.competitions[0].details.forEach(event => {
+                    if(event.scoringPlay && event.team.id == homeTeam.id){
+                        homeGoals.push(event.athletesInvolved[0].displayName + " " + event.clock.displayValue)
+                        console.log(homeGoals)
+                    }else if(event.scoringPlay && event.team.id == awayTeam.id){
+                        awayGoals.push(event.athletesInvolved[0].displayName + " " + event.clock.displayValue)
+                        console.log(awayGoals)
+                    }
+                });
+            }
+
+            const homeGoalsP = document.createElement("p");
+            homeGoalsP.innerHTML = homeGoals.toString();
+
+            const awayGoalsP = document.createElement("p");
+            awayGoalsP.innerHTML = awayGoals.toString();
+
+            homeTeamDiv.appendChild(homeGoalsP);
+            awayTeamDiv.appendChild(awayGoalsP);
+
             scoreboard.appendChild(awayTeamDiv);
             scoreboard.appendChild(homeTeamDiv);
             // Create venue information
             const venueStuff = document.getElementById('venue-stuff');
             venueStuff.innerHTML = competition.venue.fullName + ", " + competition.venue.address?.city || '' + " " + competition.venue.address?.state || '';
 
-
+            
 
             // Assemble all elements
             container.appendChild(header);
